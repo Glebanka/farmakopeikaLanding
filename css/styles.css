@@ -88,15 +88,20 @@ select {
 
 /* Все основные стили: */
 
+body{
+    background: #835FB5;
+    overflow: hidden;
+}
+
 /* Хедер */
 header{
-    margin: 0 auto;
+    margin: 20px auto 0;
     width: 1710px;
 
     display: flex;
     padding: 10px 10px 10px 20px;
     align-items: center;
-    gap: 39px;
+    justify-content: space-between;
 
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.80);
@@ -131,6 +136,10 @@ header a.text{
     text-decoration: none;
 }
 
+header a.text:active{
+    color: #400F65;
+}
+
 input.registerButton{
     display: flex;
     width: 347px;
@@ -151,3 +160,59 @@ input.registerButton{
     font-weight: 700;
     line-height: normal;
 }
+
+div.familyImg{
+    position: absolute;
+    top:139px;
+    
+    background-image: url(../img/family1920.webp);
+    
+    background-size: cover;
+    width: 995px;
+    height: 1356px;
+}
+
+@media (min-width: 2560px) {
+  div.familyImg{
+    left: calc(100vw / 1.886);
+  }
+}
+@media (max-width: 2560px) {
+  div.familyImg{
+    left: calc(100vw / 1.825);
+  }
+}
+@media (max-width: 1903px) {
+  div.familyImg{
+    left: calc(100vw / 1.736);
+  }
+}
+@media (max-width: 1440px) {
+  div.familyImg{  
+    left: calc(100vw / 1.973);
+    width: 879px;
+    height: 1268px;
+  }
+}
+@media (max-width: 1260px){
+  div.familyImg{  
+    left: calc(100vw / 1.927);
+    width: 782px;
+    height: 986px;
+  }
+}
+@media (max-width: 1024px){
+  div.familyImg{  
+    left: calc(100vw / 1.58);   
+    width: 470px;
+    height: 727px;
+  }
+}
+@media (max-width: 320px){
+  div.familyImg{  
+    left: calc(100vw / 4.38);
+    width: 312px;
+    height: 458px;
+  }        
+}
+ 
