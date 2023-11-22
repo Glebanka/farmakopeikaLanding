@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Фармакопейка Акция</title>
-    <link rel="icon" sizes="32x32 type="image/svg+xml" href="img/favicon.svg">
-    <link rel="icon" sizes="32x32 type="image/png" href="img/favicon.png">
+    <link rel="icon" sizes="32x32" type="image/svg+xml" href="img/favicon.svg">
+    <link rel="icon" sizes="32x32" type="image/png" href="img/favicon.png">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/main.js" href="js/main.js" async></script>
 </head>
 <body>
     <header class="header">
@@ -21,8 +22,71 @@
             <a href="#" class="text">Вопросы и ответы</a>
             <a href="#" class="text">Правила</a>
         </div>
-        <input name="registerButton" type="button" class="registerButton" value="Зарегистрировать промокод"></input>
+        <input name="registerButton" type="button" class="registerButton" value="Зарегистрировать промокод" id="openPopUp"></input>
     </header>
+
+    <div class="popUp" id="popUp">
+        <div class="popUpContainer">
+            <div class="popUpBody">
+                <button class="closeButton" id="closePopUp"></button>
+                <div class="popUpWrapper">
+                    <form class="popUpForm">
+                        <p>Регистрация промокода</p>
+                        <div class="popUpFormContainers">
+                            <div class="popUpFormContainer">
+                                <label for="surname" class="popUpLabel">Фамилия*</label>
+                                <input type="text" name="surname" class="popUpField" placeholder="Введите Фамилию" required>
+                            </div>
+                            <div class="popUpFormContainer">
+                                <label for="name" class="popUpLabel">Имя*</label>
+                                <input type="text" name="name" class="popUpField" placeholder="Введите Имя" required>
+                            </div>
+                            <div class="popUpFormContainer">
+                                <label for="phone" class="popUpLabel">Телефон*</label>
+                                <input type="phone" name="phone" class="popUpField" placeholder="+7 (___) ___-__-__" required>
+                            </div>
+                            <div class="popUpFormContainer">
+                                <label for="email" class="popUpLabel">Электронная почта</label>
+                                <input type="email" name="email" class="popUpField" placeholder="E-mail">
+                            </div>
+                            <div class="popUpFormContainer">
+                                <label for="promo" class="popUpLabel">Промокод*</label>
+                                <div class="popUpFormInputs">
+                                    <input type="text" name="promo" class="popUpField">
+                                    <input type="text" name="promo" class="popUpField">
+                                    <input type="text" name="promo" class="popUpField">
+                                    <input type="text" name="promo" class="popUpField">
+                                    <input type="text" name="promo" class="popUpField">
+                                    <input type="text" name="promo" class="popUpField">
+                                    <input type="text" name="promo" class="popUpField">
+                                </div>
+                            </div>
+                        </div>
+                        <button class="plusPromoButton">
+                            <div class="plusIcon"></div>
+                            <p>Добавить еще промокод</p>
+                        </button>
+                        <div class="checkBoxes">
+                            <div class="checkBoxWrapper">
+                                <input type="checkbox" name="rulesCheck" class="rulesCheckbox"></input>
+                                <label for="rulesCheck">Согласен(-на) с <a href="https://priz-fk.ru/assets/pdf/promotionRules.pdf">правилами акции</a></label>
+                            </div>
+                            <div class="checkBoxWrapper">
+                                <input type="checkbox" name="rulesCheck" class="rulesCheckbox"></input>
+                                <label for="rulesCheck">Согласен(-на) <a href="https://priz-fk.ru/assets/pdf/privacyPolicy.pdf">обработку персональных данных</a></label>
+                            </div>
+                        </div>
+                        <input name="registerFormButton" type="button" class="registerFormButton" value="Зарегистрировать промокод"></input>
+                        
+                        <div class="telephoneWrapper">
+                            <p>Телефон технической поддержки</p>
+                            <a href="tel:88002009707" class="tel">8-800-200-97-07</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="familyImg"></div>
 </body>

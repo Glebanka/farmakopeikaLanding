@@ -163,13 +163,275 @@ input.registerButton{
     line-height: normal;
 }
 
+/* Поп-ап на кнопку */
+
+div.popUp{
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(64,15,101,.5);
+  z-index: 3;
+}
+
+div.popUp.active {
+  display: block;
+}
+
+div.popUpContainer{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+div.popUpBody{
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%,-50%);
+  
+  padding: 15px 0;
+  max-width: 1114px;
+  width: 95%;
+  height: 95%; 
+
+  border-radius: 18px;
+  background: #FFF;
+}
+
+button.closeButton{
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  padding: 0 0;
+
+  width: 25px;
+  height: 25px;
+
+  border: none;
+  background-color: rgba(0,0,0,0);
+
+  background-image: url(../img/X.svg);
+  background-size: 25 25;
+  background-position: center;
+  cursor: pointer;
+}
+
+div.popUpWrapper{
+  padding: 0 90px;
+
+  height: 100%;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #7351a6 rgba(220,21,21,0);
+}
+
+form.popUpForm{
+  max-width: 478px;
+  width: 100%;
+  padding: 19px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  margin: auto;
+
+}
+
+form.popUpForm p{
+  width: 470px;
+
+  color: #7351A6;
+  text-align: center;
+  font-family: Raleway;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 160%;
+}
+
+/* Инпуты */
+
+div.popUpFormContainers{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px; 
+}
+
+div.popUpFormContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+div.popUpFormContainer label{
+  color: #7351A6;
+  text-align: center;
+  font-family: Raleway;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 25.6px */
+  
+  opacity: 0.6;
+}
+
+div.popUpFormContainer input[type=text],
+div.popUpFormContainer input[type=email],
+div.popUpFormContainer input[type=phone]{
+  width: 470px;
+  min-height: 62px;
+  padding: 12px 16px;
+  
+  border-radius: 12px;
+  border: 1px solid #7351A6;
+  background: #FFF;
+  
+  color: #7351A6;
+  font-variant-numeric: lining-nums proportional-nums;
+  text-overflow: ellipsis;
+  font-family: Raleway;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 159.523%; /* 31.905px */ 
+}
+
+/* Скролл для инпут-промокодов */
+
+div.popUpFormContainers :nth-child(5){
+  max-height: 224px
+}
+div.popUpFormInputs{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+
+  height: 100%;
+  
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #7351a6 rgba(220,21,21,0);
+}
+
+/* Кнопка добавить промокод */
+
+button.plusPromoButton{
+  width: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 7px;
+  
+  background-color: #FFF;
+  border: none;
+  padding: 0 0;
+  cursor: pointer;
+}
+
+div.plusIcon{
+  background-image: url(../img/plusIcon.svg);
+  min-width: 20px;
+  height: 20px;
+}
+
+button.plusPromoButton p{
+  min-width: 166px;
+
+  color: #000;
+  font-family: Raleway;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 22.4px */
+}
+
+/* Чекбоксы */
+
+div.checkBoxes{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+div.checkBoxWrapper{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+div.checkBoxWrapper label{
+  color: #000;
+  font-family: Raleway;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 25.6px */
+}
+input[type=checkbox]{
+  width: 20px;
+  height: 20px;
+}
+
+/* Кнопка зарегистрировать */
+
+input[type=button].registerFormButton{
+  width: 470px;
+  height: 62px;
+  padding: 20px 32px;
+
+  border-radius: 12px;
+  border: 1px solid #7351A6;
+  background: #7351A6;
+  cursor: pointer;
+
+  color: #FFF;
+  font-family: Raleway;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+/* Телефон */
+
+div.telephoneWrapper{
+  width: 478px;
+
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+div.telephoneWrapper p{
+  max-width: 226px;
+
+  color: #7351A6;
+  font-family: Raleway;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 22.4px */
+}
+div.telephoneWrapper a{
+  color: #7351A6;
+  font-variant-numeric: lining-nums proportional-nums;
+  font-family: Raleway;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%; /* 22.4px */
+}
 /* Основной контент */
 
 div.familyImg{
-    position: absolute;
-    top:139px;
-    
-    background-image: url(../img/family.webp);
+  position: absolute;
+  top:139px;
+  
+  background-image: url(../img/family.webp);
     background-size: cover;
 
     width: 995px;
@@ -368,6 +630,61 @@ div.familyImg{
     height: 727px;
   }
 }
+@media (max-width: 700px){
+  form.popUpForm{
+    width: 280px;
+  }
+  form.popUpForm p{
+    width: 280px;
+    font-size: 20px;
+  }
+  div.popUpFormContainer input[type=text],
+  div.popUpFormContainer input[type=email],
+  div.popUpFormContainer input[type=phone]{
+    width: 280px;
+    min-height: 44px;
+    border-radius: 5px;
+    font-size: 12px;
+  }
+  div.popUpWrapper{
+    padding: 0 10px;
+  }
+
+  div.popUpFormContainers :nth-child(5){
+    max-height: 170px;
+  }
+
+  button.plusPromoButton p{
+    min-width: 143px;
+    font-size: 12px;
+  }
+  div.checkBoxWrapper label{
+    font-size: 12px;
+    line-height: 120%;
+  }
+  input[type=button].registerFormButton{
+    width: 280px;
+    height: 44px;
+    padding: 14.5px 18.125px; 
+  
+    border-radius: 5px;
+    font-size: 14px; 
+  }
+  div.telephoneWrapper{
+    width: 280px;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+  }
+  div.telephoneWrapper p{
+    max-width: 226px;
+
+    font-size: 14px;
+  }
+  div.telephoneWrapper a{
+    font-size: 14px;/* 22.4px */
+  }
+}
 @media (max-width: 370px){
   header{
     width: 300px;
@@ -381,5 +698,5 @@ div.familyImg{
     left: calc(100vw / 4.38);
     width: 312px;
     height: 458px;
-  }        
+  }
 }
